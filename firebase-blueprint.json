@@ -1,0 +1,84 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "LEEDO CPIS Staff Member and Access Controls",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "employeeId": { "type": "string" },
+        "name": { "type": "string" },
+        "designation": { "type": "string" },
+        "department": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" },
+        "role": { "type": "string" },
+        "assignedShelter": { "type": "string" },
+        "assignedArea": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "canDeleteChildren": { "type": "boolean" }
+      },
+      "required": ["id", "name", "email", "role", "location", "isActive"]
+    },
+    "Child": {
+      "title": "Child",
+      "description": "Child Case Profile and 4R Trajectory",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "nickname": { "type": "string" },
+        "gender": { "type": "string" },
+        "estimatedAge": { "type": "number" },
+        "rescueDate": { "type": "string" },
+        "rescueLocation": { "type": "string" },
+        "rescueArea": { "type": "string" },
+        "currentShelter": { "type": "string" },
+        "caseStatus": { "type": "string" },
+        "shelterStatus": { "type": "string" },
+        "familyTracingStatus": { "type": "string" },
+        "assignedStaff": { "type": "string" }
+      },
+      "required": ["id", "name", "gender", "rescueDate", "caseStatus"]
+    },
+    "SUSAttendanceRecord": {
+      "title": "SUSAttendanceRecord",
+      "description": "School Under the Sky Daily Session and Food Voucher",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "location": { "type": "string" },
+        "totalStudentsAttended": { "type": "number" },
+        "boysCount": { "type": "number" },
+        "girlsCount": { "type": "number" },
+        "learningTopic": { "type": "string" },
+        "foodDistributionNotes": { "type": "string" },
+        "foodVoucherFileName": { "type": "string" },
+        "conductedBy": { "type": "string" }
+      },
+      "required": ["id", "date", "location", "totalStudentsAttended"]
+    },
+    "VocationalStudent": {
+      "title": "VocationalStudent",
+      "description": "Kadamtali Vocational Training Center Trainee Record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "gender": { "type": "string" },
+        "enrolledTrade": { "type": "string" },
+        "admissionDate": { "type": "string" },
+        "status": { "type": "string" },
+        "attendanceRatePercent": { "type": "number" },
+        "instructorName": { "type": "string" }
+      },
+      "required": ["id", "name", "age", "enrolledTrade", "status"]
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}

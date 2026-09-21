@@ -1,0 +1,6 @@
+{
+  "name": "LEEDO Child Protection & Case Management System",
+  "description": "Comprehensive child protection, rescue, shelter management, family tracing, reintegration, referral, follow-up, and reporting system for LEEDO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
